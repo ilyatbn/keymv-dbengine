@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  scylla-node1:
+    image: scylladb/scylla
+    container_name: scylla-node1
+    volumes:
+    - scylla:/var/lib/scylla
+    ports:
+    - 9042:9042
+    - 9142:9142
+volumes:
+  scylla:
